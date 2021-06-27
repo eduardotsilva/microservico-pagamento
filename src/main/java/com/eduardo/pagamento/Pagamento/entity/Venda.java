@@ -1,6 +1,8 @@
 package com.eduardo.pagamento.Pagamento.entity;
 
+import com.eduardo.pagamento.Pagamento.vo.VendaVO;
 import lombok.*;
+import org.modelmapper.ModelMapper;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
@@ -32,5 +34,9 @@ public class Venda implements Serializable {
 
     @Column(name = "valorTotal", nullable = false)
     private Double valorTotal;
+
+    public static Venda create(VendaVO vendaVO) {
+        return new ModelMapper().map(vendaVO, Venda.class);
+    }
 
 }

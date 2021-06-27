@@ -1,6 +1,5 @@
 package com.eduardo.pagamento.Pagamento.vo;
 
-import com.eduardo.pagamento.Pagamento.entity.ProdutoVenda;
 import com.eduardo.pagamento.Pagamento.entity.Venda;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -29,7 +28,7 @@ public class VendaVO extends RepresentationModel<VendaVO> implements Serializabl
     private Date data;
 
     @JsonProperty("produtos")
-    private List<ProdutoVenda> produtos;
+    private List<ProdutoVendaVO> produtos;
 
     @JsonProperty("valorTotal")
     private Double valorTotal;

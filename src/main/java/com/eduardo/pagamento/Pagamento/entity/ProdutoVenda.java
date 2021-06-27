@@ -1,6 +1,8 @@
 package com.eduardo.pagamento.Pagamento.entity;
 
+import com.eduardo.pagamento.Pagamento.vo.ProdutoVendaVO;
 import lombok.*;
+import org.modelmapper.ModelMapper;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -30,4 +32,7 @@ public class ProdutoVenda implements Serializable {
     @JoinColumn(name = "id_venda")
     private Venda venda;
 
+    public static ProdutoVenda create(ProdutoVendaVO produtoVendaVO){
+        return new ModelMapper().map(produtoVendaVO, ProdutoVenda.class);
+    }
 }
