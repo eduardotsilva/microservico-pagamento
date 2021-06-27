@@ -1,4 +1,4 @@
 # pagamento-api
-Microserviço de pagamento - comunicará com o crud-api
+Microserviço de Vendas/Pagamentos dos produtos (crud-api)
 
 #EM CONSTRUÇÃO
