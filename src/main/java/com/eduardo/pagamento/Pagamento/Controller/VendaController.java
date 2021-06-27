@@ -44,7 +44,7 @@ public class VendaController {
             ) {
         var sortDirection = "desc".equalsIgnoreCase(direction) ? Sort.Direction.DESC : Sort.Direction.ASC;
 
-        Pageable pageable = PageRequest.of(page, limit, Sort.by(sortDirection, "nome"));
+        Pageable pageable = PageRequest.of(page, limit, Sort.by(sortDirection, "data"));
 
         Page<VendaVO> vendas = vendaService.findAll(pageable);
 
