@@ -21,6 +21,15 @@ spring:
     username: microservices
     password: microservices123
 
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: admin
 
-
+crud:
+  rabbitmq:
+    exchange: crud.exchange
+    routingkey: crud.produto.routingkey
+    queue: crud.produto.queue
 
