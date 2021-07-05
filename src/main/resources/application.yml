@@ -17,9 +17,9 @@ spring:
   jmx:
     enable: false
   datasource:
-    url: jdbc:mysql://localhost:3306/pagamento?allowPublicKeyRetrieval=true&sslMode=DISABLED&useSSL=false&serverTimezone=UTC
-    username: microservices
-    password: microservices123
+    url: jdbc:mysql://localhost:3306/pagamento?allowPublicKeyRetrieval=true&sslMode=DISABLED&useSSL=false&serverTimezone=UTC&createDatabaseIfNotExist=true
+    username: root
+    password: root
 
   rabbitmq:
     host: localhost
